@@ -4,6 +4,26 @@ header {
   flex-direction: row;
   border-bottom: 2px solid #bbd6fa;
 
+  @keyframes slideInHead {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(75%);
+    }
+  }
+
+  @keyframes slideOutHead {
+    from {
+      transform: translateX(75%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+  }
+
   .header_left {
     display: flex;
     flex-direction: row;

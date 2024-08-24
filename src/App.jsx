@@ -1,3 +1,6 @@
+import { Provider } from "react-redux";
+import store from "./store.js";
+
 import Header from "./components/header";
 import Nav from "./components/navigation";
 import Cards from "./components/cards";
@@ -7,7 +10,7 @@ import style from "./test.module.scss";
 
 export default function App() {
   return (
-    <>
+    <Provider store={store}>
       <div className={style.container}>
         <Header />
         <Nav />
@@ -17,6 +20,6 @@ export default function App() {
           <Tables />
         </main>
       </div>
-    </>
+    </Provider>
   );
 }

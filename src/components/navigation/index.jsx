@@ -1,3 +1,6 @@
+import style from "./style.module.scss";
+import { useSelector } from "react-redux";
+
 import ic1 from "../../assets/icons/ic1.png";
 import ic2 from "../../assets/icons/ic2.png";
 import ic3 from "../../assets/icons/ic3.png";
@@ -16,9 +19,9 @@ import ic14 from "../../assets/icons/ic14.png";
 import more from "../../assets/more.png";
 import more_act from "../../assets/more_act.png";
 
-import style from "./style.module.scss";
-
 export default function Nav() {
+  const isNavVisible = useSelector((state) => state.isNavVisible);
+
   const array = [
     { text: "Sass", style: style.li },
     { text: "Finance", style: style.li },
@@ -27,13 +30,11 @@ export default function Nav() {
     { text: "Finance", style: style.li },
   ];
   return (
-    <nav className={style.nav_open}>
+    <nav className={isNavVisible ? style.nav_open : style.nav_close}>
       <div className={style.logo_container}>
         <p className={style.header_logo}>Panda</p>
       </div>
       <div className={style.nav_container}>
-        {/* <div className={style.line2}></div> */}
-
         <div className={style.nav_content}>
           <div className={style.main}>
             <h1>Main</h1>
