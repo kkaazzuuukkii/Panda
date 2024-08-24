@@ -1,0 +1,452 @@
+.statistic_tables {
+  margin-left: 15.2%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+
+  .statistic_table {
+    width: 784px;
+    height: 574px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 0px rgba(9, 30, 66, 0.31),
+      0px 3px 8px 0px rgba(9, 30, 66, 0.16);
+    background-color: white;
+
+    .table_title1 {
+      width: 784px;
+      height: 68px;
+
+      .title_container {
+        display: flex;
+        flex-direction: row;
+        gap: 370px;
+        align-items: center;
+        width: 744px;
+        height: 28px;
+        margin: 20px;
+
+        p {
+          color: rgb(71, 85, 105);
+          font-family: Archivo;
+          font-size: 20px;
+          font-weight: 600;
+          text-align: left;
+          margin: 0;
+
+          .span1 {
+            font-family: Archivo;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(71, 85, 105);
+          }
+
+          .span2 {
+            font-family: Archivo;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(148, 163, 184);
+          }
+        }
+
+        .title_drop {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+
+          .ic17 {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+
+          .ic18 {
+            width: 21px;
+            height: 21px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .table_list {
+      display: flex;
+      flex-direction: row;
+      border-top: 0.5px solid rgb(148, 163, 184);
+      background: white;
+      width: 784px;
+      height: 86px;
+
+      .list_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+          margin: 0;
+          color: rgb(71, 85, 105);
+          font-family: Archivo;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        .head {
+          color: rgb(30, 41, 59);
+          font-family: Archivo;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .cell1 {
+          display: flex;
+          flex-direction: row;
+          margin-left: 5%;
+          gap: 20px;
+
+          img {
+            width: 62px;
+            height: 62px;
+          }
+
+          .name {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 218px;
+            height: 62px;
+            justify-content: center;
+          }
+        }
+
+        .cell2 {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 108px;
+          height: 48px;
+        }
+
+        .cell3 {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 108px;
+          height: 48px;
+        }
+
+        .cell4 {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 108px;
+          height: 48px;
+        }
+
+        .cell5 {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 120px;
+          height: 48px;
+          align-items: flex-end;
+        }
+      }
+    }
+
+    .table_pagi {
+      width: 784px;
+      height: 76px;
+      border-top: 0.5px solid rgb(148, 163, 184);
+      display: flex;
+      flex-direction: row;
+      gap: 313px;
+      justify-content: space-around;
+      align-items: center;
+
+      p {
+        color: rgb(148, 163, 184);
+        font-family: Archivo;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        margin: 0;
+      }
+
+      .pagination {
+        display: flex;
+        flex-direction: row;
+        width: 229px;
+        height: 36px;
+
+        img {
+          width: 32px;
+          height: 32px;
+          margin-block: 2px;
+          cursor: pointer;
+        }
+
+        p {
+          padding: 8px 12px 8px 12px;
+          border-radius: 4px;
+          background: white;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          color: #1e293b;
+          cursor: pointer;
+        }
+
+        .pagip_act {
+          padding: 8px 12px 8px 12px;
+          border-radius: 4px;
+          background: rgb(59, 130, 246);
+          color: white;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .table_title2 {
+      width: 784px;
+      height: 86px;
+
+      .title_container2 {
+        margin: 20px;
+        width: 744px;
+        height: 46px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 434px;
+
+        p {
+          color: rgb(71, 85, 105);
+          font-family: Archivo;
+          width: 103px;
+          height: 28px;
+          font-size: 20px;
+          font-weight: 600;
+          margin: 0;
+          align-items: left;
+        }
+
+        .field {
+          width: 207px;
+          height: 46px;
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .dropdown_content {
+            top: 100%;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #5a5656;
+          }
+
+          .dropdown {
+            width: 170px;
+            height: 46px;
+            background-color: rgb(239, 246, 255);
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+
+            .dropdown_container {
+              padding: 16px 32px;
+              justify-content: center;
+              align-items: center;
+              display: flex;
+              flex-direction: row;
+              gap: 16px;
+
+              p {
+                color: rgb(148, 163, 184);
+                font-family: Archivo;
+                font-size: 18px;
+                font-weight: 400;
+                text-align: left;
+                margin: 0;
+                width: 66px;
+                height: 24px;
+              }
+
+              img {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+
+          img {
+            width: 21px;
+            height: 21px;
+          }
+        }
+      }
+    }
+
+    .table_list2 {
+      display: flex;
+      flex-direction: row;
+      border-top: 0.5px solid rgb(148, 163, 184);
+      background: white;
+      width: 784px;
+      height: 82px;
+
+      .list_container2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+          margin: 0;
+          color: rgb(71, 85, 105);
+          font-family: Archivo;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        .head {
+          color: rgb(30, 41, 59);
+          font-family: Archivo;
+          font-size: 16px;
+          font-weight: 400;
+          text-wrap: wrap;
+        }
+
+        .cell1t {
+          display: flex;
+          flex-direction: row;
+          margin-left: 5%;
+          gap: 20px;
+
+          img {
+            width: 62px;
+            height: 62px;
+          }
+
+          .name {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 218px;
+            height: 62px;
+            justify-content: center;
+          }
+        }
+
+        .cell2t {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 91px;
+          height: 48px;
+        }
+
+        .cell3t {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 91px;
+          height: 48px;
+        }
+
+        .cell4t {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 91px;
+          height: 48px;
+        }
+
+        .cell5t {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 91px;
+          height: 24px;
+        }
+
+        .cell6t {
+          display: flex;
+          flex-direction: row;
+          gap: 4px;
+          width: 80px;
+          height: 10px;
+          align-items: flex-end;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    .table_pagi2 {
+      width: 784px;
+      height: 70px;
+      border-top: 0.5px solid rgb(148, 163, 184);
+      display: flex;
+      flex-direction: row;
+      gap: 313px;
+      justify-content: space-around;
+      align-items: center;
+
+      p {
+        color: rgb(148, 163, 184);
+        font-family: Archivo;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        margin: 0;
+      }
+
+      .pagination2 {
+        display: flex;
+        flex-direction: row;
+        width: 229px;
+        height: 36px;
+
+        img {
+          width: 32px;
+          height: 32px;
+          margin-block: 2px;
+          cursor: pointer;
+        }
+
+        p {
+          padding: 8px 12px 8px 12px;
+          border-radius: 4px;
+          background: white;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          color: #1e293b;
+          cursor: pointer;
+        }
+
+        .pagip_act {
+          padding: 8px 12px 8px 12px;
+          border-radius: 4px;
+          background: rgb(59, 130, 246);
+          color: white;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
