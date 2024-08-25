@@ -50,6 +50,13 @@ nav {
     }
   }
 
+  .more {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: right;
+  }
+
   &.nav_open {
     animation: slideIn 0.3s forwards;
     transform: translateX(0);
@@ -81,18 +88,11 @@ nav {
         cursor: pointer;
         display: flex;
         flex-direction: row;
-        gap: 8px;
+        gap: 2px;
         flex-wrap: nowrap;
         background: #eff6ff;
         border-radius: 5px;
-        padding: 10px;
-
-        .more_act {
-          width: 20px;
-          height: 20px;
-          display: flex;
-          justify-content: flex-end;
-        }
+        padding: 9px;
 
         .component_icon {
           width: 20px;
@@ -113,6 +113,7 @@ nav {
         .li {
           color: #475569;
           transition: all 275ms ease;
+          margin-block: 2px;
 
           &:hover {
             background-color: #eff6ff;
@@ -148,9 +149,9 @@ nav {
         cursor: pointer;
         display: flex;
         flex-direction: row;
-        gap: 8px;
         flex-wrap: nowrap;
-        padding: 10px;
+        gap: 2px;
+        padding: 9px;
         transition: all 275ms ease;
 
         &:hover {
@@ -175,13 +176,6 @@ nav {
           &:hover {
             color: #1e293b;
           }
-        }
-
-        .more {
-          width: 20px;
-          height: 20px;
-          display: flex;
-          justify-content: right;
         }
       }
 

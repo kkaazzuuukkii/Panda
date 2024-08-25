@@ -2,21 +2,21 @@ import style from "./style.module.scss";
 
 import ic17 from "../../assets/icons/ic17.png";
 import ic18 from "../../assets/icons/ic18.png";
-import good1 from "../../goods/good1.png";
-import good2 from "../../goods/good2.png";
-import good3 from "../../goods/good3.png";
-import good4 from "../../goods/good4.png";
-import good5 from "../../goods/good5.png";
+import good1 from "../../assets/goods/good1.png";
+import good2 from "../../assets/goods/good2.png";
+import good3 from "../../assets/goods/good3.png";
+import good4 from "../../assets/goods/good4.png";
+import good5 from "../../assets/goods/good5.png";
 import ic19 from "../../assets/icons/ic19.png";
 import ic20 from "../../assets/icons/ic20.png";
 
 import ic21 from "../../assets/icons/ic21.png";
 import ic22 from "../../assets/icons/ic22.png";
-import comp1 from "../../goods/comp1.png";
-import comp2 from "../../goods/comp2.png";
-import comp3 from "../../goods/comp3.png";
-import comp4 from "../../goods/comp4.png";
-import comp5 from "../../goods/comp5.png";
+import comp1 from "../../assets/goods/comp1.png";
+import comp2 from "../../assets/goods/comp2.png";
+import comp3 from "../../assets/goods/comp3.png";
+import comp4 from "../../assets/goods/comp4.png";
+import comp5 from "../../assets/goods/comp5.png";
 
 export default function Tables() {
   const table1arr = [
@@ -131,34 +131,34 @@ export default function Tables() {
             </div>
           </div>
         </div>
-        {table1arr.map((item) => (
-          <div className={style.table_list}>
+        {table1arr.map((v, i) => (
+          <div key={i} className={style.table_list}>
             <div className={style.list_container}>
               <div className={style.cell1}>
-                <img src={item.image} />
+                <img src={v.image} />
                 <div className={style.name}>
-                  <p className={style.head}>{item.name}</p>
-                  <p>{item.date}</p>
+                  <p className={style.head}>{v.name}</p>
+                  <p>{v.date}</p>
                 </div>
               </div>
 
               <div className={style.cell2}>
-                <p className={style.head}>{item.price}</p>
+                <p className={style.head}>{v.price}</p>
                 <p>Price</p>
               </div>
 
               <div className={style.cell3}>
-                <p className={style.head}>{item.orders}</p>
+                <p className={style.head}>{v.orders}</p>
                 <p>Orders</p>
               </div>
 
               <div className={style.cell4}>
-                <p className={style.head}>{item.stock}</p>
+                <p className={style.head}>{v.stock}</p>
                 <p>Stock</p>
               </div>
 
               <div className={style.cell5}>
-                <p className={style.head}>{item.amount}</p>
+                <p className={style.head}>{v.amount}</p>
                 <p>Amount</p>
               </div>
             </div>
@@ -194,14 +194,14 @@ export default function Tables() {
             </div>
           </div>
         </div>
-        {table2arr.map((item) => (
-          <div className={style.table_list2}>
+        {table2arr.map((v, i) => (
+          <div key={i} className={style.table_list2}>
             <div className={style.list_container2}>
               <div className={style.cell1t}>
-                <img src={item.image} />
+                <img src={v.image} />
                 <div className={style.name}>
-                  <p className={style.head}>{item.name}</p>
-                  <p>{item.author}</p>
+                  <p className={style.head}>{v.name}</p>
+                  <p>{v.author}</p>
                 </div>
               </div>
 
@@ -213,20 +213,20 @@ export default function Tables() {
               </div>
 
               <div className={style.cell3t}>
-                <p className={style.head}>{item.type}</p>
+                <p className={style.head}>{v.type}</p>
               </div>
 
               <div className={style.cell4t}>
-                <p className={style.head}>{item.stock}</p>
+                <p className={style.head}>{v.stock}</p>
                 <p>Stock</p>
               </div>
 
               <div className={style.cell5t}>
-                <p className={style.head}>{item.price}</p>
+                <p className={style.head}>{v.price}</p>
               </div>
 
               <div className={style.cell6t}>
-                <p className={style.head}>{item.percent}</p>
+                <p className={style.head}>{v.percent}</p>
                 <img src={ic22} />
               </div>
             </div>

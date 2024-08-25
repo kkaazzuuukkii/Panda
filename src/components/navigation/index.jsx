@@ -29,6 +29,103 @@ export default function Nav() {
     { text: "Finance", style: style.li },
     { text: "Finance", style: style.li },
   ];
+  const main = [
+    {
+      text: "Dashboard",
+      icon: ic1,
+      style: style.component,
+      more: "",
+      mores: "",
+    },
+    {
+      text: "Calendar",
+      icon: ic2,
+      style: style.component,
+      more: "",
+      mores: "",
+    },
+    {
+      text: "Email",
+      icon: ic3,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+  ];
+  const components = [
+    {
+      text: "Ui Elements",
+      icon: ic4,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "Forms",
+      icon: ic5,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "Charts",
+      icon: ic6,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "Tables",
+      icon: ic7,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "Icons",
+      icon: ic8,
+      style: style.component_act,
+      more: more_act,
+      mores: style.more,
+    },
+  ];
+  const extras = [
+    {
+      text: "Layouts",
+      icon: ic10,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "Authentication",
+      icon: ic11,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "Experienxes",
+      icon: ic12,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "File Manager",
+      icon: ic13,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+    {
+      text: "E-Commerce",
+      icon: ic14,
+      style: style.component,
+      more: more,
+      mores: style.more,
+    },
+  ];
   return (
     <nav className={isNavVisible ? style.nav_open : style.nav_close}>
       <div className={style.logo_container}>
@@ -38,48 +135,26 @@ export default function Nav() {
         <div className={style.nav_content}>
           <div className={style.main}>
             <h1>Main</h1>
-            <div className={style.component}>
-              <img src={ic1} className={style.component_icon} />
-              <a href='#'>Dashboard</a>
-            </div>
-            <div className={style.component}>
-              <img src={ic2} className={style.component_icon} />
-              <a href='#'>Calendar</a>
-            </div>
-            <div className={style.component}>
-              <img src={ic3} className={style.component_icon} />
-              <a href='#'>Email</a>
-              <img src={more} className={style.more} />
-            </div>
+
+            {main.map((v, i) => (
+              <div key={i} className={v.style}>
+                <img src={v.icon} className={style.component_icon} />
+                <a href='#'>{v.text}</a>
+                <img src={v.more} className={v.mores} />
+              </div>
+            ))}
           </div>
 
           <div className={style.components}>
             <h1>Components</h1>
-            <div className={style.component}>
-              <img src={ic4} className={style.component_icon} />
-              <a href='#'>Ui Elements</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component}>
-              <img src={ic5} className={style.component_icon} />
-              <a href='#'>Forms</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component}>
-              <img src={ic6} className={style.component_icon} />
-              <a href='#'>Charts</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component}>
-              <img src={ic7} className={style.component_icon} />
-              <a href='#'>Tables</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component_act}>
-              <img src={ic8} className={style.component_icon} />
-              <a href='#'>Icons</a>
-              <img src={more_act} className={style.more_act} />
-            </div>
+
+            {components.map((v, i) => (
+              <div key={i} className={v.style}>
+                <img src={v.icon} className={style.component_icon} />
+                <a href='#'>{v.text}</a>
+                <img src={v.more} className={v.mores} />
+              </div>
+            ))}
             <ul>
               {array.map((v, i) => (
                 <li key={i} className={v.style}>
@@ -96,31 +171,14 @@ export default function Nav() {
 
           <div className={style.extras}>
             <h1>Extras</h1>
-            <div className={style.component}>
-              <img src={ic10} className={style.component_icon} />
-              <a href='#'>Layouts</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component}>
-              <img src={ic11} className={style.component_icon} />
-              <a href='#'>Authentication</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component}>
-              <img src={ic12} className={style.component_icon} />
-              <a href='#'>Experienxes</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component}>
-              <img src={ic13} className={style.component_icon} />
-              <a href='#'>File Manager</a>
-              <img src={more} className={style.more} />
-            </div>
-            <div className={style.component}>
-              <img src={ic14} className={style.component_icon} />
-              <a href='#'>E-Commerce</a>
-              <img src={more} className={style.more} />
-            </div>
+
+            {extras.map((v, i) => (
+              <div key={i} className={v.style}>
+                <img src={v.icon} className={style.component_icon} />
+                <a href='#'>{v.text}</a>
+                <img src={v.more} className={v.mores} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

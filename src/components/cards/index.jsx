@@ -6,8 +6,8 @@ import ic16 from "../../assets/icons/ic16.png";
 export default function Cards() {
   return (
     <div className={style.statistic_cards}>
-      {[...Array(4)].map(() => (
-        <div className={style.statistic_card}>
+      {[...Array(4)].map((v, i) => (
+        <div key={i} className={style.statistic_card}>
           <div className={style.statistic_container}>
             <div className={style.statistic_link}>
               <p className={style.stat_profit}>Total Profit</p>
