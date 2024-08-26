@@ -3,9 +3,12 @@ import style from "./style.module.scss";
 import ic15 from "../../assets/icons/ic15.png";
 import ic16 from "../../assets/icons/ic16.png";
 
-export default function Cards() {
+export default function Cards({ isDark, setIsDark }) {
   return (
-    <div className={style.statistic_cards}>
+    <div
+      className={`${style.statistic_cards} ${
+        isDark ? style.statistic_cards_dark : ""
+      }`}>
       {[...Array(4)].map((v, i) => (
         <div key={i} className={style.statistic_card}>
           <div className={style.statistic_container}>

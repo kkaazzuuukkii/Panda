@@ -6,7 +6,6 @@ body {
   margin: 0;
   font-family: "Jost", sans-serif;
   overflow-x: hidden;
-  background-color: #f3f4f6;
 }
 
 a {
@@ -15,10 +14,17 @@ a {
 
 .container {
   max-width: 1920px;
+  background-color: #f6f3f4;
   margin-inline: auto;
+  height: 150%;
 
   main {
     width: 100%;
     height: 100vh;
   }
+}
+
+.container_dark {
+  background-color: #3f3f3f;
+  height: 100vh;
 }

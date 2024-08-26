@@ -190,7 +190,7 @@
         p {
           padding: 8px 12px 8px 12px;
           border-radius: 4px;
-          background: white;
+          background-color: white;
           display: flex;
           text-align: center;
           justify-content: center;
@@ -244,14 +244,6 @@
           justify-content: center;
           align-items: center;
           position: relative;
-
-          .dropdown_content {
-            top: 100%;
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: #5a5656;
-          }
 
           .dropdown {
             width: 170px;
@@ -445,6 +437,114 @@
           text-align: center;
           justify-content: center;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.statistic_tables_dark {
+  .statistic_table {
+    box-shadow: 0px 0px 1px 0px rgba(86, 92, 100, 0.31),
+      0px 3px 8px 0px rgba(86, 92, 100, 0.31);
+    background-color: #575757;
+
+    .table_title1 {
+      .title_container {
+        p {
+          color: rgb(175, 170, 170);
+
+          .span1 {
+            color: rgb(175, 170, 170);
+          }
+          .span2 {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .table_list {
+      border-top: 0.5px solid rgb(211, 211, 211);
+      background-color: #575757;
+
+      .list_container {
+        p {
+          color: rgb(175, 170, 170);
+        }
+        .head {
+          color: white;
+        }
+      }
+    }
+
+    .table_pagi {
+      border-top: 0.5px solid rgb(211, 211, 211);
+
+      p {
+        color: rgb(175, 170, 170);
+      }
+
+      .pagination {
+        p {
+          background-color: #575757;
+          color: white;
+        }
+
+        .pagip_act {
+          background-color: rgb(83, 116, 168);
+        }
+      }
+    }
+
+    .table_title2 {
+      .title_container2 {
+        p {
+          color: rgb(175, 170, 170);
+        }
+        .field {
+          .dropdown {
+            background-color: rgb(154, 159, 167);
+
+            .dropdown_container {
+              p {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .table_list2 {
+      border-top: 0.5px solid rgb(211, 211, 211);
+      background-color: #575757;
+
+      .list_container2 {
+        p {
+          color: rgb(175, 170, 170);
+        }
+        .head {
+          color: white;
+        }
+      }
+    }
+
+    .table_pagi2 {
+      border-top: 0.5px solid rgb(211, 211, 211);
+
+      p {
+        color: rgb(175, 170, 170);
+      }
+
+      .pagination2 {
+        p {
+          background-color: #575757;
+          color: white;
+        }
+
+        .pagip_act {
+          background-color: rgb(83, 116, 168);
         }
       }
     }

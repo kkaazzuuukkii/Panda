@@ -10,12 +10,12 @@ import chat from "../../assets/chat.png";
 import settings from "../../assets/settings.png";
 import avatar from "../../assets/avatar.png";
 
-export default function Header() {
+export default function Header({ isDark, setIsDark }) {
   const dispatch = useDispatch();
   const isNavOpen = useSelector((state) => state.isNavVisible);
 
   return (
-    <header>
+    <header className={isDark ? style.header_dark : ""}>
       <div
         className={`${style.header_left} ${
           isNavOpen ? style.header_open : style.header_close
@@ -34,7 +34,11 @@ export default function Header() {
           <img src={heart} alt='Heart' />
           <img src={notify} alt='Notify' />
           <img src={chat} alt='Chat' />
-          <img src={settings} alt='Settings' />
+          <img
+            src={settings}
+            alt='Settings'
+            onClick={() => setIsDark(!isDark)}
+          />
         </div>
         <img src={avatar} className={style.header_avatar} alt='Avatar' />
       </div>

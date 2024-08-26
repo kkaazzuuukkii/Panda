@@ -18,7 +18,7 @@ import comp3 from "../../assets/goods/comp3.png";
 import comp4 from "../../assets/goods/comp4.png";
 import comp5 from "../../assets/goods/comp5.png";
 
-export default function Tables() {
+export default function Tables({ isDark, setIsDark }) {
   const table1arr = [
     {
       name: "Branded T-Shirt",
@@ -116,7 +116,10 @@ export default function Tables() {
   ];
 
   return (
-    <div className={style.statistic_tables}>
+    <div
+      className={`${style.statistic_tables} ${
+        isDark ? style.statistic_tables_dark : ""
+      }`}>
       <div className={style.statistic_table}>
         <div className={style.table_title1}>
           <div className={style.title_container}>

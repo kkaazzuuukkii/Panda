@@ -114,6 +114,7 @@ nav {
           color: #475569;
           transition: all 275ms ease;
           margin-block: 2px;
+          cursor: pointer;
 
           &:hover {
             background-color: #eff6ff;
@@ -140,7 +141,7 @@ nav {
           font-family: "Archivo", sans-serif;
         }
 
-        ::marker {
+        &::marker {
           background-color: #eff6ff;
         }
       }
@@ -185,6 +186,68 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 2px;
+      }
+    }
+  }
+}
+
+.nav_dark {
+  background-color: #575757;
+
+  .logo_container {
+    border-bottom: 2px solid #2e1f57;
+
+    .header_logo {
+      color: rgb(255, 255, 255);
+    }
+  }
+  .nav_container {
+    .nav_content {
+      h1 {
+        color: white;
+      }
+
+      .component_act {
+        background: #656769;
+
+        a {
+          color: white;
+        }
+      }
+
+      ul {
+        .li {
+          color: white;
+
+          &:hover {
+            background: #656769;
+          }
+
+          a {
+            color: white;
+          }
+        }
+        .li_act {
+          background-color: #656769;
+          color: white;
+
+          a {
+            color: white;
+          }
+
+          &::marker {
+            background-color: #656769;
+          }
+        }
+      }
+
+      .component {
+        &:hover {
+          background: #656769;
+        }
+        a {
+          color: white;
+        }
       }
     }
   }
