@@ -1,4 +1,5 @@
 import style from "./style.module.scss";
+import { useSelector } from "react-redux";
 
 import ic17 from "../../assets/icons/ic17.png";
 import ic18 from "../../assets/icons/ic18.png";
@@ -18,7 +19,9 @@ import comp3 from "../../assets/goods/comp3.png";
 import comp4 from "../../assets/goods/comp4.png";
 import comp5 from "../../assets/goods/comp5.png";
 
-export default function Tables({ isDark, setIsDark }) {
+export default function Tables() {
+  const isThemeAct = useSelector((state) => state.isThemeAct);
+
   const table1arr = [
     {
       name: "Branded T-Shirt",
@@ -118,7 +121,7 @@ export default function Tables({ isDark, setIsDark }) {
   return (
     <div
       className={`${style.statistic_tables} ${
-        isDark ? style.statistic_tables_dark : ""
+        isThemeAct ? style.statistic_tables_dark : ""
       }`}>
       <div className={style.statistic_table}>
         <div className={style.table_title1}>

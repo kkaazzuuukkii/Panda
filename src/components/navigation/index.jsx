@@ -19,8 +19,9 @@ import ic14 from "../../assets/icons/ic14.png";
 import more from "../../assets/more.png";
 import more_act from "../../assets/more_act.png";
 
-export default function Nav({ isDark, setIsDark }) {
+export default function Nav() {
   const isNavVisible = useSelector((state) => state.isNavVisible);
+  const isThemeAct = useSelector((state) => state.isThemeAct);
 
   const array = [
     { text: "Sass", style: style.li },
@@ -126,10 +127,11 @@ export default function Nav({ isDark, setIsDark }) {
       mores: style.more,
     },
   ];
+
   return (
     <nav
       className={`${isNavVisible ? style.nav_open : style.nav_close} ${
-        isDark ? style.nav_dark : ""
+        isThemeAct ? style.nav_dark : ""
       }`}>
       <div className={style.logo_container}>
         <p className={style.header_logo}>Panda</p>

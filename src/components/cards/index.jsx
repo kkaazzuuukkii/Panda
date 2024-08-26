@@ -1,13 +1,16 @@
 import style from "./style.module.scss";
+import { useSelector } from "react-redux";
 
 import ic15 from "../../assets/icons/ic15.png";
 import ic16 from "../../assets/icons/ic16.png";
 
-export default function Cards({ isDark, setIsDark }) {
+export default function Cards() {
+  const isThemeAct = useSelector((state) => state.isThemeAct);
+
   return (
     <div
       className={`${style.statistic_cards} ${
-        isDark ? style.statistic_cards_dark : ""
+        isThemeAct ? style.statistic_cards_dark : ""
       }`}>
       {[...Array(4)].map((v, i) => (
         <div key={i} className={style.statistic_card}>
