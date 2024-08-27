@@ -1,6 +1,5 @@
 import React from "react";
-import { Provider, useSelector } from "react-redux";
-import store from "./redux/store";
+import { useSelector } from "react-redux";
 import style from "./test.module.scss";
 
 import Header from "./components/header";

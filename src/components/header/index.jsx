@@ -52,7 +52,13 @@ export default function Header() {
       <div className={style.header_right}>
         <div className={style.header_opt}>
           <img src={flag} alt='Flag' />
-          <img src={heart} alt='Heart' />
+          <img
+            src={heart}
+            alt='Heart'
+            onClick={() => {
+              alert("Как называются серёжки для простаков? ");
+            }}
+          />
           <img
             src={notify}
             alt='Notify'
@@ -60,7 +66,13 @@ export default function Header() {
               alert("Чем люди могут поделиться только один раз?");
             }}
           />
-          <img src={chat} alt='Chat' />
+          <img
+            src={chat}
+            alt='Chat'
+            onClick={() => {
+              alert("Сколько яиц можно съесть натощак? ");
+            }}
+          />
           <img
             src={settings}
             alt='Settings'
