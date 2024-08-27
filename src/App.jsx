@@ -12,15 +12,13 @@ export default function App() {
   const isThemeAct = useSelector((state) => state.theme.isThemeAct);
 
   return (
-    <Provider store={store}>
-      <div className={isThemeAct ? style.container_dark : style.container}>
-        <Header />
-        <Nav />
-        <main>
-          <Cards />
-          <Tables />
-        </main>
-      </div>
-    </Provider>
+    <div className={isThemeAct ? style.container_dark : style.container}>
+      <Header />
+      <Nav />
+      <main>
+        <Cards />
+        <Tables />
+      </main>
+    </div>
   );
 }
