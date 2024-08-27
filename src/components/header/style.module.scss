@@ -33,6 +33,7 @@ header {
 
     &.header_open {
       animation: slideInHead 0.3s forwards;
+      margin-left: 1%;
     }
 
     &.header_close {

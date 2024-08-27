@@ -20,7 +20,7 @@ import comp4 from "../../assets/goods/comp4.png";
 import comp5 from "../../assets/goods/comp5.png";
 
 export default function Tables() {
-  const isThemeAct = useSelector((state) => state.isThemeAct);
+  const isThemeAct = useSelector((state) => state.theme.isThemeAct);
 
   const table1arr = [
     {

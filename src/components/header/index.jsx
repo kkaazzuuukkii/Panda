@@ -1,6 +1,7 @@
 import style from "./style.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleNav, toggleTheme } from "../../action.js";
+import { navReducer } from "../../redux/slices/navSlice";
+import { themeReducer } from "../../redux/slices/themeSlice";
 
 import button from "../../assets/Icon buttons.png";
 import flag from "../../assets/flag.png";
@@ -12,8 +13,8 @@ import avatar from "../../assets/avatar.png";
 
 export default function Header() {
   const dispatch = useDispatch();
-  const isNavOpen = useSelector((state) => state.isNavVisible);
-  const isThemeAct = useSelector((state) => state.isThemeAct);
+  const isNavOpen = useSelector((state) => state.nav.isNavVisible);
+  const isThemeAct = useSelector((state) => state.theme.isThemeAct);
 
   return (
     <header className={isThemeAct ? style.header_dark : ""}>
@@ -23,7 +24,7 @@ export default function Header() {
         }`}>
         <img
           src={button}
-          onClick={() => dispatch(toggleNav())}
+          onClick={() => dispatch(navReducer())}
           alt='Toggle Nav'
         />
         <input type='text' placeholder='Search' />
@@ -38,7 +39,7 @@ export default function Header() {
           <img
             src={settings}
             alt='Settings'
-            onClick={() => dispatch(toggleTheme())}
+            onClick={() => dispatch(themeReducer())}
           />
         </div>
         <img src={avatar} className={style.header_avatar} alt='Avatar' />

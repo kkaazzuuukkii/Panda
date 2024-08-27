@@ -5,7 +5,7 @@ import ic15 from "../../assets/icons/ic15.png";
 import ic16 from "../../assets/icons/ic16.png";
 
 export default function Cards() {
-  const isThemeAct = useSelector((state) => state.isThemeAct);
+  const isThemeAct = useSelector((state) => state.theme.isThemeAct);
 
   return (
     <div

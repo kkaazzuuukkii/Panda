@@ -20,8 +20,8 @@ import more from "../../assets/more.png";
 import more_act from "../../assets/more_act.png";
 
 export default function Nav() {
-  const isNavVisible = useSelector((state) => state.isNavVisible);
-  const isThemeAct = useSelector((state) => state.isThemeAct);
+  const isNavVisible = useSelector((state) => state.nav.isNavVisible);
+  const isThemeAct = useSelector((state) => state.theme.isThemeAct);
 
   const array = [
     { text: "Sass", style: style.li },
