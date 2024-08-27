@@ -113,7 +113,7 @@ export default function Tables() {
       image: comp5,
       type: "Furniture",
       stock: "4100",
-      price: "11,260",
+      price: "$11,260",
       percent: "57%",
     },
   ];

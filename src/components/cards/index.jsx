@@ -7,6 +7,10 @@ import ic16 from "../../assets/icons/ic16.png";
 export default function Cards() {
   const isThemeAct = useSelector((state) => state.theme.isThemeAct);
 
+  const isMemAct = useSelector((state) => state.mem.isMemAct);
+  const memText = useSelector((state) => state.mem.memText);
+  const memHref = useSelector((state) => state.mem.memHref);
+
   return (
     <div
       className={`${style.statistic_cards} ${
@@ -18,7 +22,9 @@ export default function Cards() {
             <div className={style.statistic_link}>
               <p className={style.stat_profit}>Total Profit</p>
               <p>$559.25k</p>
-              <a href='#'>View all orders</a>
+              <a href={isMemAct ? memHref : "#"} target='_blank'>
+                {isMemAct ? memText : "View all orders"}
+              </a>
             </div>
             <div className={style.statistic_base}>
               <div>

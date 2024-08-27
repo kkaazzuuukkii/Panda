@@ -46,20 +46,31 @@ header {
       height: 56px;
       cursor: pointer;
     }
+    span {
+      position: relative;
 
-    input {
-      background-color: #93c4fd44;
-      border: none;
-      width: 300px;
-      height: 56px;
-      border-radius: 30px;
-      padding-left: 5%;
-      font-size: 17px;
-      background-image: url("./assets/search.png");
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: 24px;
-      background-position-x: 90%;
+      input {
+        padding-left: 5%;
+        background-color: #93c4fd44;
+        border: none;
+        width: 300px;
+        height: 56px;
+        border-radius: 30px;
+        font-size: 17px;
+        background-image: url("./assets/search.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 24px;
+        background-position-x: 90%;
+      }
+
+      img {
+        position: absolute;
+        top: 30%;
+        right: 4%;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
