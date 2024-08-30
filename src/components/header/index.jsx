@@ -2,9 +2,8 @@ import style from "./style.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { navReducer } from "../../redux/slices/navSlice";
 import { themeReducer } from "../../redux/slices/themeSlice";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { checkValue } from "../../redux/slices/memSlice";
-
 import button from "../../assets/Icon buttons.png";
 import flag from "../../assets/flag.png";
 import heart from "../../assets/heart.png";
@@ -21,11 +20,11 @@ export default function Header() {
 
   const [value, setValue] = useState("");
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
-    const newValue = event.target.value;
-    dispatch(checkValue(newValue));
-  };
+  const inputRef = useRef();
+
+  useEffect(() => {
+    dispatch(checkValue(inputRef.current.value));
+  }, [value]);
 
   return (
     <header className={isThemeAct ? style.header_dark : ""}>
@@ -40,10 +39,11 @@ export default function Header() {
         />
         <span>
           <input
+            ref={inputRef}
             type='text'
             placeholder='Search'
             value={value}
-            onChange={handleChange}
+            onChange={(e) => setValue(e.target.value)}
           />
           <img src={search} className={style.input_img} />
         </span>
@@ -56,7 +56,7 @@ export default function Header() {
             src={heart}
             alt='Heart'
             onClick={() => {
-              alert("Как называются серёжки для простаков? ");
+              alert("Как называются серёжки для простаков?");
             }}
           />
           <img

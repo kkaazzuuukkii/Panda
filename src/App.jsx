@@ -14,10 +14,8 @@ export default function App() {
     <div className={isThemeAct ? style.container_dark : style.container}>
       <Header />
       <Nav />
-      <main>
-        <Cards />
-        <Tables />
-      </main>
+      <Cards />
+      <Tables />
     </div>
   );
 }
